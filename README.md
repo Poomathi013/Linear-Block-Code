@@ -51,14 +51,14 @@ hp1 = np.vstack((zero_row, ht))
 print('**********')
 print('The Generator Matrix is: ')
 #for r in p_mat: 
-#    print(" ".join(map(str, r)))
+#    print(" ".join(map(str, r)))
 #for r in Ik: 
-#    print(" ".join(map(str, r)))
+#    print(" ".join(map(str, r)))
 for r in g_mat: 
   print(" ".join(map(str, r)))
 
 print('**********')
-print(f'Message Bits  Codeword   Hamming Weight')
+print(f'Message Bits  Codeword   Hamming Weight')
 code_word = np.hstack((m, c, h_mat.T))
 for r in range(code_word.shape[0]):
   format_row = " ".join(map(str, code_word[r, :k])) + '\t' + " ".join(map(str, code_word[r, k:n+k])) + '\t' + str(code_word[r, -1])
@@ -85,7 +85,7 @@ e = np.mod(np.dot(r_c, ht), 2)
 #print('**********')
 #print(f'Received codeword Matrix')
 #for r in r_c:
-#    print(" ".join(map(str, r)))
+#    print(" ".join(map(str, r)))
 # Find the Error position
 for i in range(n):
   if np.array_equal(e[0], ht[i, :]):
@@ -107,6 +107,7 @@ add = err + rc
 add = np.array(add)
 add1 = add % 2
 print(f"The correct codeword is : " + " " .join(map(str,add1)))
+
 # Output Waveform
 ![image](https://github.com/user-attachments/assets/dbb87d72-7772-4aba-bfbe-05e5e1bdcd2e)
 
@@ -115,5 +116,9 @@ print(f"The correct codeword is : " + " " .join(map(str,add1)))
 Thus linear block code operation for the given input is successfully verified.
 # Hardware experiment output waveform.
 ![image](https://github.com/user-attachments/assets/6082292f-fceb-4d93-9a25-2d3bd037cbd0)
+![image](https://github.com/user-attachments/assets/ba90c84a-0ddb-410b-8032-a4df19501252)
+![image](https://github.com/user-attachments/assets/a61df199-955a-4b5b-85c3-afbd9bdd43d3)
+
+
 
 
