@@ -4,6 +4,7 @@ Write a simple python program to Generate Matrix, Codeword, Hamming weight, Synd
 # Tools required
 Python IDE with Numpy and Scipy
 # Program
+```
 import numpy as np
 
 pb = [] # Parity matrix
@@ -107,7 +108,7 @@ add = err + rc
 add = np.array(add)
 add1 = add % 2
 print(f"The correct codeword is : " + " " .join(map(str,add1)))
-
+```
 # Output Waveform
 ![image](https://github.com/user-attachments/assets/dbb87d72-7772-4aba-bfbe-05e5e1bdcd2e)
 
